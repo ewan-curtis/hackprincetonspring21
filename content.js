@@ -35,3 +35,5 @@ link.setAttribute("href", encodedUri);
 link.setAttribute("download", "rooms.csv");
 document.body.appendChild(link); // Required for FF
 link.click();
+
+document.getElementsByTagName("li")[12].getElementsByTagName("a")[0].click()

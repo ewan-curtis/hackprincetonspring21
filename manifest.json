@@ -3,21 +3,13 @@
     "name": "roomExport",
     "description": "Easily export room data from rooms.tigerapps.org",
     "version": "1.0",
-    "content_scripts": [{
-        "matches": [
-            "http://rooms.tigerapps.org/table"
-        ],
-        "js": ["content.js"]
-    }],
     "browser_action": {
         "default_icon": "icon.png"
     },
     "background": {
-        "scripts": ["background.js"],
-        "persistent": true
+        "scripts": ["background.js"]
     },
     "permissions": [
-        "activeTab",
-        "https://ajax.googleapis.com/"
+        "activeTab"
     ]
 }
