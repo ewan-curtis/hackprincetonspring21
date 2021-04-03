@@ -34,5 +34,4 @@ var link = document.createElement("a");
 link.setAttribute("href", encodedUri);
 link.setAttribute("download", "rooms.csv");
 document.body.appendChild(link); // Required for FF
-
 link.click();
