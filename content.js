@@ -14,11 +14,15 @@ function csv() {
     }
 }
 
+var startPageNumber = document.getElementsByClassName("paginate_button active")[0].getElementsByTagName("a")[0].text
+
+document.getElementsByTagName("li")[12].getElementsByTagName("a")[0].click()
+
 var csvArray = [
     ["College", "Building", "Floor", 'Room', 'Sqft', 'Number of People', 'Sub-Free', 'Features']
 ];
 // 
-let next = document.getElementById('table_next')
+var next = document.getElementById('table_next')
 csv()
 while (next.classList.length <= 2) {
     next.click()
@@ -26,7 +30,7 @@ while (next.classList.length <= 2) {
     csv()
 }
 
-let csvContent = "data:text/csv;charset=utf-8," +
+var csvContent = "data:text/csv;charset=utf-8," +
     csvArray.map(e => e.join(",")).join("\n");
 
 var encodedUri = encodeURI(csvContent);
@@ -37,3 +41,7 @@ document.body.appendChild(link); // Required for FF
 link.click();
 
 document.getElementsByTagName("li")[12].getElementsByTagName("a")[0].click()
+
+while (document.getElementsByClassName("paginate_button active")[0].getElementsByTagName("a")[0].text != startPageNumber) {
+    document.getElementById('table_next').click()
+}
