@@ -45,3 +45,9 @@ document.getElementsByTagName("li")[12].getElementsByTagName("a")[0].click()
 while (document.getElementsByClassName("paginate_button active")[0].getElementsByTagName("a")[0].text != startPageNumber) {
     document.getElementById('table_next').click()
 }
+
+// Feature Ideas:
+// - Nicer looking interface for the extension to work with:
+//      * maybe landing page for when you first download?
+// - Integrate in the ratings of a room, if they are available
+// - Integrate in the textual reviews of a room, if they are available

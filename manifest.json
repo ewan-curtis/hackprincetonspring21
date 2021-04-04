@@ -10,6 +10,16 @@
         "scripts": ["background.js"]
     },
     "permissions": [
-        "activeTab"
+        "*://rooms.tigerapps.org/table"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://rooms.tigerapps.org/table"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
     ]
 }
